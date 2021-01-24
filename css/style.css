@@ -357,9 +357,7 @@ footer {
     .sub-menu::before {
         display: none;
     }
-    .sub-menu:hover{
-        display: block;
-    }
+    
     .nav-list li:hover>.sub-menu {
         opacity: 1;
         visibility: visible;
@@ -367,9 +365,12 @@ footer {
     }
 
     .menu-icons {
-        z-index: 10;
         display: block;
-        font-size: 6rem;
+        justify-content: start;
+        align-items: initial;
+        z-index: 10;
+        display: inline-block;
+        font-size: 4rem;
     }
     .ion-md-close{
         display: none;
