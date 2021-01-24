@@ -172,7 +172,7 @@ nav {
 .slideshow-items img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:cover;
     opacity: 1;
     animation: zoom 31s infinite;
 }
@@ -276,7 +276,7 @@ footer {
 
 .titulo-final {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 20px 0 0 0;
     color: #9e9797;
 }
@@ -338,6 +338,7 @@ footer {
         flex-direction: column;
         background-color: #f38200;
         z-index: 2;
+        overflow-y: scroll;
     }
 
     .nav-list>li {
@@ -356,7 +357,9 @@ footer {
     .sub-menu::before {
         display: none;
     }
-
+    .sub-menu:hover{
+        display: block;
+    }
     .nav-list li:hover>.sub-menu {
         opacity: 1;
         visibility: visible;
