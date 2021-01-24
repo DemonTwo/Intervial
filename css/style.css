@@ -9,6 +9,7 @@
 body {
     font-family: sans-serif;
     background-color: rgb(2, 2, 2);
+    overflow-x: hidden;
 }
 
 html {
@@ -65,8 +66,7 @@ nav {
     width: 15rem;
     height: 7rem;
     background-color: #ffff;
-    border-radius: 50%;
-    display: flex;
+    border-radius: 50%;    display: flex;
 }
 
 .logo img {
@@ -109,7 +109,7 @@ nav {
     border-top: 4px solid #000;
     background-color: #f38200;
     border-bottom: 4px solid #000;
-    z-index: 1;
+    z-index: 2;
     top: 12rem;
     opacity: 0;
     visibility: hidden;
@@ -146,7 +146,7 @@ nav {
 
 /*Secciones*/
 .contenedor-slide {
-    width: 70%;
+    width: 100%;
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -156,7 +156,7 @@ nav {
 
 .slideshow {
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     position: relative;
     overflow: hidden;
 }
@@ -168,6 +168,7 @@ nav {
     opacity: 0;
     animation: cycleimages 31s infinite;
 }
+
 .slideshow-items img {
     width: 100%;
     height: 100%;
@@ -175,17 +176,20 @@ nav {
     opacity: 1;
     animation: zoom 31s infinite;
 }
+
 /*Delay*/
 .slideshow-items:nth-child(1),
-.slideshow-items:nth-child(1) img{
+.slideshow-items:nth-child(1) img {
     animation-delay: 0s;
 }
+
 .slideshow-items:nth-child(2),
-.slideshow-items:nth-child(2) img{
+.slideshow-items:nth-child(2) img {
     animation-delay: 10s;
 }
+
 .slideshow-items:nth-child(3),
-.slideshow-items:nth-child(3) img{
+.slideshow-items:nth-child(3) img {
     animation-delay: 20s;
 }
 
@@ -228,8 +232,9 @@ nav {
     }
 
 }
-@keyframes zoom{
-    25%{
+
+@keyframes zoom {
+    25% {
         transform: scale(1.1);
     }
 }
@@ -245,7 +250,7 @@ footer {
 
 .contenedor-footer {
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: space-evenly;
     margin: auto;
     padding-bottom: 10px;
@@ -279,4 +284,130 @@ footer {
 
 /*Mediaquieries*/
 
-@media
+@media screen and (max-width: 1000px) {
+    .contenedor-slide {
+        width: 100%;
+    }
+
+    .slideshow-item-text {
+        max-width: 70%;
+        padding: 5rem 1rem;
+    }
+
+    .slideshow-item-text h5 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contenedor-slide {
+        width: 100%;
+    }
+
+    .slideshow-item-text {
+        border: none;
+        border-bottom: 8px solid #f38200;
+        max-width: 100%;
+        padding: 2rem;
+        top: initial;
+        bottom: 0;
+        transform: initial;
+    }
+
+    .slideshow-item-text h5 {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .slideshow-item-text p {
+        font-size: 1.4rem;
+    }
+    
+  
+    .logo{
+        width: 13rem;
+    }
+    .nav-list {
+        display: none;
+        justify-content: start;
+        align-items: initial;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #f38200;
+        z-index: 2;
+    }
+
+    .nav-list>li {
+        top: 8rem;
+        line-height: 6rem;
+    }
+
+    .sub-menu {
+        position: initial;
+        border: 3px solid transparent;
+        border-left-color: #000;
+        margin-left: 1rem;
+        max-height: 0;
+    }
+
+    .sub-menu::before {
+        display: none;
+    }
+
+    .nav-list li:hover>.sub-menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: initial;
+    }
+
+    .menu-icons {
+        z-index: 10;
+        display: block;
+        font-size: 6rem;
+    }
+    .ion-md-close{
+        display: none;
+    }
+
+
+    nav.active .ion-md-close{
+        display: block;
+    }
+
+    nav.active .ion-md-menu{
+        display: none;
+    }
+
+    nav.active .nav-list{
+        display: flex;
+    }
+    .contenedor-footer {
+        flex-direction: column;
+        border: none;
+    }
+
+    .contenedor-foo {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contenedor-foo h4 {
+        border: none;
+    }
+
+    .contenedor-foo p {
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final {
+        font-size: 20px;
+    }
+  
+}
+
+/*Menu mediaQ*/
