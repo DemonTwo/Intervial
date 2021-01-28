@@ -214,10 +214,17 @@ nav {
     margin-bottom: 2.5rem;
 }
 
-.slideshow-item-text p {
+.slideshow-item-text > p {
     font-size: 1.5rem;
     letter-spacing: 1px;
     font-weight: 300;
+}
+
+.serv{
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 4px solid #f38200;
+    font-size: 3rem !important
 }
 
 /*¨Keyframes*/
