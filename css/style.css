@@ -220,7 +220,7 @@ nav {
     margin-bottom: 2.5rem;
 }
 
-.slideshow-item-text > p {
+ p {
     font-size: 1.5rem;
     letter-spacing: 1px;
     font-weight: 300;
@@ -247,12 +247,14 @@ nav {
 }
 /*cONTENEDOR*/
 .servi{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2.5rem;
     margin-top: 20px;
     padding-top: 10px;
-    font-size: 4rem;
 }
 .servs{
-    font-size: 2rem;
     margin-bottom: 20px;
     padding-left:20px;
     border-left: 4px solid #ffa743;
@@ -315,9 +317,7 @@ footer {
         padding: 5rem 1rem;
     }
 
-    .slideshow-item-text h5 {
-        font-size: 4rem;
-    }
+  
 }
 
 @media screen and (max-width: 800px) {
@@ -395,7 +395,6 @@ footer {
         justify-content: start;
         align-items: initial;
         z-index: 10;
-        display: inline-block;
         font-size: 4rem;
     }
     .ion-md-close{
@@ -413,6 +412,9 @@ footer {
 
     nav.active .nav-list{
         display: flex;
+    }
+    .servs{
+        
     }
     /*Footer*/
     .contenedor-footer {
